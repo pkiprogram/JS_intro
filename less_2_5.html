@@ -1,0 +1,28 @@
+<!-- 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. 
+    Обязательно использовать оператор return. -->
+
+<script>
+    var a = parseInt(Math.random() * 10)
+    var b = parseInt(Math.random() * 10)
+
+    function sum(a, b) {
+        return a + b;
+    }
+
+    function dif(a, b) {
+        return a - b;
+    }
+
+    function div(a, b) {
+        if (b == 0) {
+            return alert('Деление на ноль невозможно!');
+        } else {
+            return a / b;
+        }
+
+    }
+
+    function mult(a, b) {
+        return a + b;
+    }
+</script>

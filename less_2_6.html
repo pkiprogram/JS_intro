@@ -1,0 +1,54 @@
+<!-- 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+    где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+    В зависимости от переданного значения операции выполнить одну из арифметических операций 
+    (использовать функции из пункта 3) и вернуть полученное значение (использовать switch). -->
+
+<script>
+    var a = parseInt(Math.random() * 10);
+    var b = parseInt(Math.random() * 10);
+    var operation = prompt("Введите знак арифметической операции (+,-,*,/): ");
+
+    function sum(a, b) {
+        return (a + b);
+    }
+
+    function dif(a, b) {
+        return (a - b);
+    }
+
+    function div(a, b) {
+        if (b == 0) {
+            return alert('Деление на ноль невозможно!');
+        } else {
+            return (a / b);
+        }
+    }
+
+    function mult(a, b) {
+        return (a * b);
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "+":
+                summ = sum(arg1, arg2);
+                document.write(summ);
+                break;
+            case "-":
+                diff = dif(arg1, arg2);
+                document.write(diff);
+                break;
+            case "*":
+                multipl = mult(arg1, arg2);
+                document.write(multipl);
+                break;
+            case "/":
+                divis = div(arg1, arg2);
+                document.write(divis);
+                break;
+            default:
+                document.write("Неверный знак операции")
+        }
+    }
+    mathOperation(a,b,operation)
+</script>
