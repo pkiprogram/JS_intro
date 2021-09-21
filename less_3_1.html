@@ -1,0 +1,18 @@
+<!-- 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100 -->
+
+
+<script>
+    var number = 0;
+    while (number <= 100) {
+        var isSimple = true;
+        for (var i = 2; i < number; i++) {
+            if (number % i === 0) {
+                isSimple = false;
+                break;
+            }
+        }
+        if (isSimple) console.log(number);
+        number++;
+
+    }
+</script>

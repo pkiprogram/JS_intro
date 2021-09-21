@@ -1,0 +1,37 @@
+<!-- 2. С этого урока начинаем работать с функционалом интернет-магазина. 
+    Предположим, есть сущность корзины. 
+    Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. -->
+
+
+<script>
+    var goodsBasket = [{
+            product: "product1",
+            price: 200,
+            count: 35
+        },
+        {
+            product: "product2",
+            price: 150,
+            count: 22
+        },
+        {
+            product: "product3",
+            price: 225,
+            count: 14
+        },
+        {
+            product: "product4",
+            price: 80,
+            count: 8
+        }
+    ];
+    var basketPrice = 0;
+    for (var item of goodsBasket) {
+        countSumm = item.price * item.count;
+        basketPrice += countSumm;
+        console.log("Стоимость товара " + item.product + " составляет: " + item.price);
+        console.log("Cуммарная стоимость " + item.count + " товаров " + item.product + " составляет " + countSumm);
+    }
+
+    console.log("Стоимость корзины составляет: " + basketPrice);
+</script>
