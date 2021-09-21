@@ -1,0 +1,40 @@
+<!-- 3. Товары в корзине хранятся в массиве. Задачи:
+a) Организовать такой массив для хранения товаров в корзине;
+b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины. -->
+
+
+<script>
+    var goodsBasket = [{
+            product: "product1",
+            price: 200,
+            count: 35
+        },
+        {
+            product: "product2",
+            price: 150,
+            count: 22
+        },
+        {
+            product: "product3",
+            price: 225,
+            count: 14
+        },
+        {
+            product: "product4",
+            price: 80,
+            count: 8
+        }
+    ];
+
+    function countBasketPrice(goodsBasket) {
+        var basketPrice = 0;
+        for (var item of goodsBasket) {
+            countSumm = item.price * item.count;
+            basketPrice += countSumm;
+            console.log("Стоимость товара " + item.product + " составляет: " + item.price);
+            console.log("Cуммарная стоимость " + item.count + " товаров " + item.product + " составляет " + countSumm);
+        }
+        return basketPrice;
+    }
+    console.log("Стоимость корзины составляет: " + countBasketPrice(goodsBasket));
+</script>
