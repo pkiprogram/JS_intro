@@ -1,0 +1,25 @@
+#img_sm {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#img_sm img {
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+body > img {
+    width: 30%;
+    border: 1px solid #000;
+    margin-top: 100px;
+    margin-right:10px;
+}
+
+#img_bg {
+    width: 70%;
+    margin-top: 30px;
+    margin-left: 200px;
+    border: 1px solid #000;
+
+}
