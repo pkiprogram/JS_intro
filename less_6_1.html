@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_6_1.css">
+    <title>Images</title>
+</head>
+
+<body>
+    <div id="img_sm">
+        <img src="small_img/1.png">
+        <img src="small_img/2.png">
+        <img src="small_img/3.png">
+        <img src="small_img/4.png">
+    </div>
+    <p id='error'></p>
+    <div>
+        <img id="img_bg" src="">
+    </div>
+
+    <script>
+        /* 1. Доработать функцию замены картинки в галерее таким образом, чтобы она проверяла наличие картинки 
+по указанному в src адресу.*/
+
+
+        var image = document.querySelectorAll("img");
+        for (var i = 0; i < image.length; i++) {
+            image[i].onclick = function (event) {
+                var largeImg = document.getElementById('img_bg');
+                largeImg.src = event.target.src.replace('small_img', 'big_img');
+                largeImg.onerror = function () {
+                    alert('В указанном каталоге изображение не найдено');
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
